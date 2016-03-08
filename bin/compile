@@ -15,11 +15,11 @@ BP_DIR=$(cd $(dirname ${0:-}); cd ..; pwd)
 $BP_DIR/compile-extensions/bin/check_stack_support
 
 # Add SOX binary and libraries to path
-status "Adding SOX library support"
+#status "Adding SOX library support"
 tar xzf $BP_DIR/vendor/sox.tar.gz -C $BUILD_DIR/vendor/
 
 # Update the PATH
-status "Building runtime environment"
+#status "Building runtime environment"
 mkdir -p $BUILD_DIR/.profile.d
 echo "export PATH=\"\$HOME/vendor/node/bin:\$HOME/bin:\$HOME/node_modules/.bin:\$HOME/vendor/:\$PATH\";" > $BUILD_DIR/.profile.d/nodejs.sh
 echo "export LD_LIBRARY_PATH=\"\$HOME/vendor/libs/\";" >> $BUILD_DIR/.profile.d/nodejs.sh
