@@ -16,7 +16,7 @@ $BP_DIR/compile-extensions/bin/check_stack_support
 
 # Add SOX binary and libraries to path
 #status "Adding SOX library support"
-#tar xzf $BP_DIR/vendor/sox.tar.gz -C $BUILD_DIR/vendor/
+tar xzf $BP_DIR/vendor/sox.tar.gz -C $BUILD_DIR/vendor/
 
 # Update the PATH
 #status "Building runtime environment"
