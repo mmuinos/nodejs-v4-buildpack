@@ -62,3 +62,11 @@ install_npm() {
     fi
   fi
 }
+
+install_sox() {
+   # Add SOX binary and libraries to path
+   mkdir -p $BUILD_DIR/vendor
+   tar xzf $BP_DIR/vendor/sox.tar.gz -C $BUILD_DIR/vendor/
+   echo "BP DIR " + $BP_DIR
+   echo "BUILD DIR " + $BUILD_DIR	
+}

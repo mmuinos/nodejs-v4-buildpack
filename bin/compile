@@ -16,10 +16,10 @@ $BP_DIR/compile-extensions/bin/check_stack_support
 
 # Add SOX binary and libraries to path
 #status "Adding SOX library support"
-mkdir -p $BUILD_DIR/vendor
-tar xzf $BP_DIR/vendor/sox.tar.gz -C $BUILD_DIR/vendor/
-echo "BP DIR " + $BP_DIR
-echo "BUILD DIR " + $BUILD_DIR
+#mkdir -p $BUILD_DIR/vendor
+#tar xzf $BP_DIR/vendor/sox.tar.gz -C $BUILD_DIR/vendor/
+#echo "BP DIR " + $BP_DIR
+#echo "BUILD DIR " + $BUILD_DIR
 
 # Update the PATH
 #status "Building runtime environment"
@@ -80,6 +80,8 @@ install_bins() {
   local node_engine=$(read_json "$BUILD_DIR/package.json" ".engines.node")
   local iojs_engine=$(read_json "$BUILD_DIR/package.json" ".engines.iojs")
   local npm_engine=$(read_json "$BUILD_DIR/package.json" ".engines.npm")
+
+  install_sox 
 
   if [ -n "$iojs_engine" ]; then
     echo "engines.iojs (package.json):  $iojs_engine (iojs)"
