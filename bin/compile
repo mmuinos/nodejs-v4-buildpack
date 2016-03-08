@@ -22,9 +22,9 @@ tar xzf $BP_DIR/vendor/sox.tar.gz -C $BUILD_DIR/vendor/
 
 # Update the PATH
 #status "Building runtime environment"
-mkdir -p $BUILD_DIR/.profile.d
-echo "export PATH=\"\$HOME/vendor/node/bin:\$HOME/bin:\$HOME/node_modules/.bin:\$HOME/vendor/:\$PATH\";" > $BUILD_DIR/.profile.d/nodejs.sh
-echo "export LD_LIBRARY_PATH=\"\$HOME/vendor/libs/\";" >> $BUILD_DIR/.profile.d/nodejs.sh
+#mkdir -p $BUILD_DIR/.profile.d
+#echo "export PATH=\"\$HOME/vendor/node/bin:\$HOME/bin:\$HOME/node_modules/.bin:\$HOME/vendor/:\$PATH\";" > $BUILD_DIR/.profile.d/nodejs.sh
+#echo "export LD_LIBRARY_PATH=\"\$HOME/vendor/libs/\";" >> $BUILD_DIR/.profile.d/nodejs.sh
 
 mkdir -p "$BUILD_DIR/.heroku/node/"
 cd $BUILD_DIR
