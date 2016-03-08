@@ -37,4 +37,8 @@ write_export() {
   local build_dir="$2"
   echo "export PATH=\"$build_dir/.heroku/node/bin:$build_dir/node_modules/.bin:\$PATH\"" > $bp_dir/export
   echo "export NODE_HOME=\"$build_dir/.heroku/node\"" >> $bp_dir/export
+  
+  echo "export PATH=\"\$HOME/vendor/node/bin:\$HOME/bin:\$HOME/node_modules/.bin:\$HOME/vendor/:\$PATH\";" >> $bp_dir/export
+  echo "export LD_LIBRARY_PATH=\"\$HOME/vendor/libs/\";" >> $bp_dir/export
+  echo "EXPORT: " + export
 }
