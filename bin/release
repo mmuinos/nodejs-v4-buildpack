@@ -4,5 +4,6 @@
 cat << EOF
 addons: []
 default_process_types:
-  web: npm start
+ web: ./vendor/initial_startup.rb
+ web: npm start
 EOF
